@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+{% include 'main/header.html' %}
+  <title>리스트</title>
+</head>
+<body>
+	<div id="body">
+{% include 'main/menu.html' %}
+		<div id="container" class="sub">
+      <div class="contents">
+        <div class="list-table">
+          <table>
+            <div class="header">
+                <h1>글목록</h1>
+                <a href="{% url 'board:write' %}"><span class="btn">글작성</span></a>
+            </div>
+    				<caption>글목록</caption>
+    				<colgroup>
+              <col style="width:80px";/>
+              <col style="width:80px";/>
+              <col style=""/>
+              <col style="width:120px;"/>
+              <col style="width:150px;"/>
+            </colgroup>
+    				<thead>
+    					<th>번호</th>
+    					<th>게시판번호</th>
+    					<th>제목</th>
+    					<th>작성자</th>
+    					<th>작성일</th>
+    				</thead>
+    				<tbody>
+{% for boarddata in boarddata %}
+    					<tr>
+    						<th class="txtcenter">{{boarddata.id}}</th>
+    						<td>{{boarddata.boardnum}}</td>
+    						<td class="txtleft"><a href="{% url 'board:read' boarddata.id %}">{{boarddata.title}}</a></td>
+    						<td>{{boarddata.writer}}</td>
+    						<td>{{boarddata.regdate|date:'Y-m-d'}}</td>
+    					</tr>
+{% endfor %}
+    				</tbody>
+    			</table>
+        </div>
+      </div>
+		</div>
+	</div>
+{% include 'main/footer.html' %}
+</body>
+</html>

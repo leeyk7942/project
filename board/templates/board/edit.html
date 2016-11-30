@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+{% include 'main/header.html' %}
+  <title>수정</title>
+</head>
+<body>
+	<div id="body">
+{% include 'main/menu.html' %}
+		<div id="container" class="sub">
+      <div class="contents">
+        <div class="write-table">
+          <form method="POST" action="" enctype="multipart/form-data" novalidate>
+    				{% csrf_token %}
+            <table>
+    				      {{ form.as_table }}
+            </table>
+    				<input class="btn" type="submit" value="작성완료"/>
+    			</form>
+        </div>
+      </div>
+		</div>
+	</div>
+{% include 'main/footer.html' %}
+</body>
+</html>

@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+body	{ clear: both; padding: 0; margin: 0; font-family: "Malgun Gothic", "맑은 고딕", "나눔고딕", NanumGothic, "돋움", Dotum, "굴림", Gulim, Helvetica, AppleGothic, Sans-serif; color: #4B4B4B; font-size: 13px; line-height: 1.7em; word-spacing: 0.1em; }
+
+/* 텍스트정렬 */
+.txtleft	{ text-align: left !important; padding: 0 0 0 10px; }
+.txtright	{ text-align: right !important; }
+.txtcenter	{ text-align: center !important; }
+
+/* 기본 커서 */
+a	{ cursor: pointer; }
+input.btn	{ cursor: pointer; }
+
+/* 기본 버튼 스타일 */
+span.btn	,
+input.btn	{ display: inline-block;  font-size: 12px; font-weight: bold; padding: 5px 15px; color: #fff; background: #025A7C; border: none; }
+
+/* 기본 테이블 스타일 */
+ caption	{ display: none;  }
+.list-table,
+.read-table,
+.write-table	{ clear: both; padding: 0; margin: 20px 0 10px 0; }
+.list-table .header,
+.read-table .header,
+.write-table .header	{ clear: both; width: 100%; display: block; height: 30px; }
+.list-table .header h1,
+.read-table .header h1,
+.write-table .header h1	{ clear: boht; width: 100%; height: 30px; margin: 0 0 5px 0; padding: 0 0 5px 0; font-size: 25px; border-bottom: solid 1px #dfdfdf; }
+.list-table .header a,
+.read-table .header a,
+.write-table .header a	{ clear: both; float: right; margin: 0 0 10px 0; }
+
+table	{  clear: both; width: 100%; margin: 20px 0; border-collapse: collapse; border-width: 3px 1px 2px 1px; border-style: solid; border-color: #0077ca transparent #0077ca transparent; text-align: center; }
+table thead th	{ line-height: 35px; padding: 3px; border-width: 0 0 1px 0; border-style: solid; border-color: transparent transparent #d0d0d0 transparent; text-align: center; font-size: 13px; font-weight: bold; }
+table tbody th, table tbody td { line-height: 25px; padding: 3px; border-width: 0 0 1px 0; border-style: solid; border-color: transparent transparent #d0d0d0 transparent; }
+
+.write-table table tbody th	{ line-height: 35px; padding: 3px; border-width: 0 1px 1px 0; border-style: solid; border-color: transparent #d0d0d0 #d0d0d0 transparent; text-align: center; font-size: 13px; font-weight: bold; }
+.write-table table tbody td	{ text-align: left; padding-left: 10px; }
+
+
+#header { width: 100%; border-bottom: solid 1px #000; }
+#topmenu  { width: 1200px; height: 150px; margin: 0 auto; }
+#topmenu ul,
+#topmenu ul li  { list-style: none; margin: 0; padding: 0; }
+#topmenu ul.dt1 li.dt1-1 { float: left; width: 150px; }
+#topmenu ul.dt1 li.dt1-1 a  { display: block; font-size: 15px; color: #000; padding: 10px 0 0 0; }
+
+#container.main  { clear: both; width: 100%; min-height: 500px; margin: 0 0 20px 0; border-bottom: solid 1px #000; }
+#container.main .contents  { width: 1200px; margin: 0 auto; padding: 20px; min-height: 500px; border-right: solid 1px #000; border-left: solid 1px #000; }
+
+#container.sub .contents  { width: 1200px; margin: 0 auto; padding: 20px; min-height: 500px; border-right: solid 1px #000; border-left: solid 1px #000; }
+
+#footer { clear: both; }
+#footer footer  { width: 1200px; margin: 0 auto; }
+#footer footer address  { text-align: center; }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+{% include 'main/header.html' %}
+  <title>상세페이지</title>
+</head>
+<body>
+	<div id="body">
+{% include 'main/menu.html' %}
+		<div id="container" class="sub">
+      <div class="contents">
+        <div class="read-table">
+          <div class="header">
+            <h1>상세페이지</h1>
+          </div>
+          <table>
+    				<caption>상세페이지</caption>
+    				<colgroup>
+              <col style="width: 200px;"/>
+            </colgroup>
+    				<thead></thead>
+    				<tbody>
+    					<tr>
+    						<th class="txtcenter">게시판번호</th>
+    						<td class="txtleft">{{boarddata.boardnum}}</td>
+    					</tr>
+    					<tr>
+    						<th class="txtcenter">작성자</th>
+    						<td class="txtleft">{{boarddata.writer}}</td>
+    					</tr>
+    					<tr>
+    						<th class="txtcenter">제목</th>
+    						<td class="txtleft">{{boarddata.title}}</td>
+    					</tr>
+    					<tr>
+    						<th class="txtcenter">내용</th>
+    						<td class="txtleft">{{boarddata.contents}}</td>
+    					</tr>
+              <tr>
+                <th class="txtcenter">링크</th>
+                <td class="txtleft"><a target="blank_" href="{{boarddata.link}}">{{boarddata.link}}</a></td>
+              </tr>
+              <tr>
+    						<th class="txtcenter">파일</th>
+    						<td class="txtleft"><a href="/upload/{{boarddata.files}}">{{boarddata.files}}</a></td>
+    					</tr>
+    					<tr>
+    						<th class="txtcenter">등록일</th>
+    						<td class="txtleft">{{boarddata.regdate|date:'Y-m-d'}}</td>
+    					</tr>
+    				</tbody>
+    			</table>
+    			<br/>
+    			<a href="{% url 'board:update' boarddata.id %}"><span class="btn">수정하기</span></a>
+          <a href="{% url 'board:list' %}"><span class="btn">목록으로</span></a>
+      </div>
+		</div>
+	</div>
+{% include 'main/footer.html' %}
+</body>
+</html>
